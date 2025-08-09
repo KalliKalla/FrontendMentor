@@ -11,7 +11,7 @@ Visit the portfolio: [https://kallikalla.github.io/FrontendMentor/](https://kall
 ### QR Code Component
 - **Challenge:** [Frontend Mentor QR Code Component](https://www.frontendmentor.io/challenges/qr-code-component-iux_sIO_H)
 - **Live Demo:** [View Project](https://kallikalla.github.io/FrontendMentor/qr-code-component-main/)
-- **Repository:** [GitHub](https://github.com/KalliKalla/qr-code-component-main)
+- **Repository:** [GitHub](https://github.com/KalliKalla/FrontendMentor/tree/master/qr-code-component-main)
 - **Technologies:** HTML, CSS
 
 ## Structure
