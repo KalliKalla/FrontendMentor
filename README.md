@@ -2,7 +2,7 @@
 
 A collection of my completed Frontend Mentor challenges, showcasing my frontend development skills.
 
-## Live Site
+## Portfolio Site
 
 Visit the portfolio: [https://kallikalla.github.io/FrontendMentor/](https://kallikalla.github.io/FrontendMentor/)
 
