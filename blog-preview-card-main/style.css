@@ -57,7 +57,7 @@ a {
   --text-size-3: clamp(0.875rem, 0.2243rem + 2.7397vw, 1rem);
   --text-preset-3: var(--font-weight-regular) var(--text-size-3) / 1.5
     var(--font-family);
-  --text-preset-3-bold: var(--font-weight-bold) 0var (--text-size-3)/1.5
+  --text-preset-3-bold: var(--font-weight-bold) var(--text-size-3) / 1.5
     var(--font-family);
 
   /* Spacing */
@@ -150,7 +150,8 @@ body {
 }
 
 .blog-preview-card__author-name {
-  font: var(--text-preset-3-bold);
+  font-size: var(--text-size-3);
+  font-weight: var(--font-weight-bold);
   margin-inline-start: var(--spacing-150);
 }
 

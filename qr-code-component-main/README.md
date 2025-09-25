@@ -93,7 +93,6 @@ In future projects, I want to focus on:
 ## Author
 
 - Frontend Mentor: https://www.frontendmentor.io/profile/KalliKalla
-- GitHub: https://github.com/KalliKalla
 
 ## Acknowledgments
 
