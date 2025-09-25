@@ -129,6 +129,10 @@ body {
   margin-bottom: var(--spacing-150);
 }
 
+.blog-preview-card__title:hover {
+  color: var(--color-yellow);
+}
+
 .blog-preview-card__description {
   font-size: var(--text-size-3);
   line-height: var(--text-line-height);
