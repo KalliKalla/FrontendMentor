@@ -49,6 +49,10 @@ a {
   color: inherit;
 }
 
+li {
+  list-style: none;
+}
+
 :root {
   /* Colors */
   --color-grey900: hsl(0, 0%, 8%);
@@ -58,12 +62,120 @@ a {
   --color-white: hsl(0, 0%, 100%);
 
   /* Fonts */
+  --font-family: "Inter";
+  --text-preset-1: 700 1.5rem/1.5 var(--font-family);
+  --text-preset-2: 400 0.875rem/1.5 var(--font-family);
+  --text-preset-2-bold: 700 0.875rem/1.5 var(--font-family);
+
+  /* Spacing */
+  --spacing-50: 0.25rem;
+  --spacing-100: 0.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2.5rem;
+
+  /* Border radius */
+  --radius-m: 0.75rem;
+
+  /* Sizes of card */
+  --size-card-min: 20.4rem;
+  --size-card-max: 24rem;
+}
+
+body {
+  background-color: var(--color-grey900);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter";
+}
+
+.profile-card {
+  background-color: var(--color-grey800);
+  border-radius: var(--radius-m);
+  padding: var(--spacing-300);
+  width: var(--size-card-min);
+}
+
+.profile-card__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  width: 100%;
+}
+
+.card__avatar {
+  width: 5.5rem;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: var(--spacing-300);
+}
+
+.card__name {
+  font: var(--text-preset-1);
+  color: var(--color-white);
+  margin-bottom: var(--spacing-50);
+}
+
+.card__location {
+  font: var(--text-preset-2-bold);
+  color: var(--color-green);
+  margin-bottom: var(--spacing-300);
+}
+
+.card__bio {
+  font: var(--text-preset-2);
+  color: var(--color-white);
+  margin-bottom: var(--spacing-300);
+}
+.card__social-links {
+  width: 100%;
+}
+
+.card__social-links ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
+}
+
+.card__social-link a {
+  display: block;
+  font: var(--text-preset-2-bold);
+  color: var(--color-white);
+  background-color: var(--color-grey700);
+  text-align: center;
+  padding: var(--spacing-150) 0;
+  border-radius: var(--radius-m);
+}
+
+.card__social-link a:hover {
+  color: var(--color-grey700);
+  background-color: var(--color-green);
+}
+
+footer {
+  position: fixed;
+  bottom: var(--spacing-50);
+  width: 100%;
+  text-align: center;
 }
 
 .attribution {
-  font-size: 11px;
-  text-align: center;
+  font-size: 0.6875rem;
+  color: var(--color-white);
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 500px) {
+  .profile-card {
+    padding: var(--spacing-400);
+    width: var(--size-card-max);
+  }
 }
