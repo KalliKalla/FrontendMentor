@@ -30,7 +30,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: https://github.com/KalliKalla/FrontendMentor/tree/master/blog-preview-card-main
+- Solution URL: https://github.com/KalliKalla/FrontendMentor/tree/master/social-links-profile-main
 - Live Site URL: https://kallikalla.github.io/FrontendMentor/social-links-profile-main/index.html
 
 ## My process
