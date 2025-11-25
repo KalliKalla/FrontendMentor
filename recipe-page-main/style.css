@@ -1,0 +1,284 @@
+/* ================================
+   1. DESIGN TOKENS
+   ================================ */
+
+@font-face {
+  font-family: "Young Serif";
+  src: url(assets/fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Outfit";
+  src: url(assets/fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* === Color Tokens === */
+
+  --color-rose-800: hsl(332, 51%, 32%);
+  --color-rose-50: hsl(330, 100%, 98%);
+  --color-stone-900: hsl(24, 5%, 18%);
+  --color-stone-600: hsl(30, 10%, 34%);
+  --color-stone-150: hsl(30, 18%, 87%);
+  --color-stone-100: hsl(30, 54%, 90%);
+  --color-brown-800: hsl(14, 45%, 36%);
+  --color-white: hsl(0, 0%, 100%);
+
+  /* === Font Family Tokens === */
+
+  --font-family-outfit: "Outfit", sans-serif;
+  --font-family-young-serif: "Young Serif", serif;
+
+  /* === Spacing Scale === */
+
+  --spacing-100: 0.5rem;
+  --spacing-150: 0.75rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+  --spacing-600: 3rem;
+  --spacing-1600: 8rem;
+
+  /* === Border Radius Scale === */
+
+  --radius-sm: 0.75rem;
+  --radius-md: 1.5rem;
+}
+
+/* ================================
+   2. RESET & BASE STYLES
+   ================================ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-outfit);
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-stone-100);
+  color: var(--color-stone-600);
+}
+
+main {
+  width: 80%;
+  max-width: 46rem;
+  min-width: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  border-radius: var(--radius-md);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* ================================
+   3. BEM COMPONENTS
+   ================================ */
+
+/* === General Styles ===*/
+
+.recipe {
+  padding: var(--spacing-500);
+}
+
+.recipe__image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-sm);
+}
+
+.recipe__content {
+  padding-top: var(--spacing-500);
+}
+
+.recipe__section {
+  margin-bottom: var(--spacing-400);
+}
+
+.recipe__section:last-child {
+  margin-bottom: 0;
+}
+
+.recipe__title {
+  font-family: var(--font-family-young-serif);
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--color-stone-900);
+  margin-bottom: var(--spacing-300);
+}
+
+.recipe__heading {
+  font-family: var(--font-family-young-serif);
+  font-size: 1.75rem;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--color-brown-800);
+  margin-bottom: var(--spacing-300);
+}
+
+.recipe__heading-small {
+  font-family: var(--font-family-outfit);
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0;
+  color: var(--color-rose-800);
+  margin-bottom: var(--spacing-200);
+}
+
+.recipe__paragraph:not(:last-child) {
+  margin-bottom: var(--spacing-300);
+}
+
+.recipe__divider {
+  border-bottom: 1px solid var(--color-stone-150);
+  margin-bottom: var(--spacing-400);
+}
+
+.recipe__label {
+  font-family: var(--font-family-outfit);
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* === Highlighted Section ===*/
+
+.recipe__section--highlighted {
+  padding: var(--spacing-300);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-rose-50);
+}
+
+.recipe__section--highlighted li::marker {
+  color: var(--color-rose-800);
+}
+
+/* === Lists ===*/
+
+.recipe__list {
+  width: 100%;
+  padding-left: var(--spacing-300);
+  list-style-position: outside;
+}
+
+.recipe__list-item {
+  margin-bottom: var(--spacing-100);
+  padding-left: var(--spacing-200);
+}
+
+.recipe__list-item:last-child {
+  margin-bottom: 0;
+}
+
+.recipe__list-item::marker {
+  color: var(--color-brown-800);
+  font-weight: 800;
+}
+
+/* === Nutrition Table === */
+
+.recipe__nutrition-label,
+.recipe__nutrition-value {
+  border-bottom: 1px solid var(--color-stone-150);
+  text-align: left;
+  width: 50%;
+  padding: var(--spacing-150) 0;
+}
+
+.recipe__nutrition-row:first-child .recipe__nutrition-label,
+.recipe__nutrition-row:first-child .recipe__nutrition-value {
+  padding-top: 0;
+}
+
+.recipe__nutrition-row:last-child .recipe__nutrition-label,
+.recipe__nutrition-row:last-child .recipe__nutrition-value {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.recipe__nutrition-label {
+  text-indent: var(--spacing-400);
+}
+
+.nutritional_information {
+  margin-top: var(--spacing-300);
+}
+
+.nutritional_information td {
+  color: var(--color-brown-800);
+}
+
+/* === Attribution Component === */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  align-items: flex-end;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ================================
+   4. RESPONSIVE DESIGN
+   ================================ */
+
+@media (width < 31.25rem) {
+  main {
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .recipe {
+    padding: 0;
+  }
+  .recipe__content {
+    padding: var(--spacing-400);
+  }
+
+  .recipe__image {
+    border-radius: 0;
+  }
+
+  .attribution {
+  }
+}
