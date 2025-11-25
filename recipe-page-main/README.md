@@ -28,7 +28,7 @@ Your challenge is to build out this recipe page and get it looking as close to t
 ### Links
 
 - Solution URL: https://github.com/KalliKalla/FrontendMentor/tree/master/recipe-page-main
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: https://kallikalla.github.io/FrontendMentor/recipe-page-main/index.html
 
 ## My process
 
