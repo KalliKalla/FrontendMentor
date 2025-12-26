@@ -1,0 +1,223 @@
+/* ================================
+   1. DESIGN TOKENS
+   ================================ */
+
+@font-face {
+  font-family: "Fraunces";
+  src: url(./assets/fonts/Fraunces_72pt-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/Montserrat-Medium.ttf) format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(./assets/fonts/Montserrat-Bold.ttf) format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* === Color Tokens === */
+
+  --color-black: hsl(212, 21%, 14%);
+  --color-white: hsl(0, 0%, 100%);
+  --color-grey: hsl(228, 12%, 48%);
+  --color-cream: hsl(30, 38%, 92%);
+  --color-green-primary: hsl(158, 36%, 37%);
+  --color-green-hover: hsl(158, 42%, 18%);
+
+  /* === Font Tokens === */
+
+  --font-fraunces: "Fraunces", serif;
+  --font-montserrat: "Montserrat", sans-serif;
+
+  /* === Text Preset Tokens === */
+
+  --text-preset-1: 700 2rem/1 var(--font-fraunces);
+  --text-preset-2: 700 0.875rem/1.1 var(--font-montserrat);
+  --text-preset-3: 500 0.875rem/1.6 var(--font-montserrat);
+  --text-preset-4: 500 0.75rem/1.2 var(--font-montserrat);
+  --text-preset-4-spacing: 0.36em;
+  --text-preset-5: 500 0.8125rem/1.2 var(--font-montserrat);
+
+  /* === Spacing Tokens === */
+
+  --spacing-50: 0.25rem;
+  --spacing-100: 0.5rem;
+  --spacing-200: 1rem;
+  --spacing-300: 1.5rem;
+  --spacing-400: 2rem;
+  --spacing-500: 2.5rem;
+
+  /* === Border Radius Tokens === */
+
+  --border-radius-100: 0.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* ================================
+   2. RESET AND BASE STYLES
+   ================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-montserrat);
+  background-color: var(--color-cream);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  margin-top: auto;
+  text-wrap: balance;
+}
+
+/* ================================
+   3. BEM COMPONENTS
+   ================================ */
+
+.product {
+  display: flex;
+  flex-direction: column;
+  max-width: 350px;
+  border-radius: var(--border-radius-100);
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.product__content {
+  padding: var(--spacing-400);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-400);
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+
+.product__category {
+  font: var(--text-preset-4);
+  color: var(--color-grey);
+  letter-spacing: var(--text-preset-4-spacing);
+  text-transform: uppercase;
+}
+
+.product__title {
+  font: var(--text-preset-1);
+  color: var(--color-black);
+}
+
+.product__description {
+  font: var(--text-preset-3);
+  color: var(--color-grey);
+}
+
+.product__price-group {
+  display: flex;
+  gap: var(--spacing-200);
+  align-items: center;
+}
+
+.product__price {
+  font: var(--text-preset-1);
+  color: var(--color-green-primary);
+}
+
+.product__price--original {
+  font: var(--text-preset-5);
+  color: var(--color-grey);
+}
+
+.product__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: var(--spacing-100);
+  font: var(--text-preset-2);
+  color: var(--color-white);
+  background-color: var(--color-green-primary);
+  border-radius: var(--border-radius-100);
+  padding: var(--spacing-200) var(--spacing-400);
+}
+
+.product__button:hover {
+  background-color: var(--color-green-hover);
+}
+
+.product__button img {
+  height: 1.286em;
+  width: 1.286em;
+}
+
+footer {
+  margin-top: auto;
+}
+
+@media (min-width: 768px) {
+  .product {
+    flex-direction: row;
+    max-width: 600px;
+  }
+
+  .product picture,
+  .product__content {
+    width: 50%;
+  }
+
+  .product__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
