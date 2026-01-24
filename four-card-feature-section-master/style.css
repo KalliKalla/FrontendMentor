@@ -30,6 +30,16 @@
   /* Typography */
   --font-family: "Poppins", sans-serif;
 
+  --font-weight-light: 200;
+  --font-weight-regular: 400;
+  --font-weight-bold: 600;
+
+  /* Type scale */
+  --font-size-s: 0.8125rem;
+  --font-size-m: 0.9375rem;
+  --font-size-l: 1.25rem;
+  --font-size-heading: clamp(1.5rem, 0.7844rem + 3.0534vw, 2.25rem);
+
   /* Colors */
   --color-grey-500: hsl(234, 12%, 34%);
   --color-grey-400: hsl(212, 6%, 44%);
@@ -49,12 +59,6 @@
   --spacing-xxl: 2.5rem;
   --spacing-heading: 0.015625rem;
   --spacing-divider: clamp(3.75rem, 2.9151rem + 3.5623vw, 4.625rem);
-
-  /* Type scale */
-  --font-size-s: 0.8125rem;
-  --font-size-m: 0.9375rem;
-  --font-size-l: 1.25rem;
-  --font-size-heading: clamp(1.5rem, 0.7844rem + 3.0534vw, 2.25rem);
 
   /* Border */
   --border-radius: 0.5rem;
@@ -83,14 +87,14 @@ body {
 
 .intro__eyebrow {
   font-size: var(--font-size-heading);
-  font-weight: 200;
+  font-weight: var(--font-weight-light);
   line-height: 1.4;
   letter-spacing: var(--spacing-heading);
 }
 
 .intro__title {
   font-size: var(--font-size-heading);
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
   line-height: 1.4;
   letter-spacing: var(--spacing-heading);
 }
@@ -101,12 +105,13 @@ body {
 
 .card__title {
   font-size: var(--font-size-l);
-  font-weight: 600;
+  font-weight: var(--font-weight-bold);
   line-height: 1.35;
 }
 
 .card__description {
   font-size: var(--font-size-s);
+  line-height: 1.6;
 }
 
 /* ================================
@@ -130,7 +135,7 @@ main {
 .intro {
   width: clamp(19.75rem, 6.3912rem + 56.9975vw, 33.75rem);
   text-align: center;
-  margin: var(--spacing-divider) auto;
+  margin-block: var(--spacing-divider);
 }
 
 .intro__title {
@@ -144,8 +149,10 @@ main {
 }
 
 .card {
-  width: clamp(19.625rem, 17.0536rem + 5.3571vw, 21.875rem);
-  height: clamp(14.6875rem, 13.7929rem + 3.8168vw, 15.625rem);
+  display: flex;
+  flex-direction: column;
+  max-width: clamp(19.625rem, 17.0536rem + 5.3571vw, 21.875rem);
+  min-height: clamp(14.6875rem, 13.7929rem + 3.8168vw, 15.625rem);
   padding: var(--spacing-xl);
   border-radius: var(--border-radius);
   border-top: var(--border-width) solid;
@@ -177,8 +184,8 @@ main {
 }
 
 .card__icon {
-  display: flex;
-  justify-content: flex-end;
+  margin-top: auto;
+  align-self: flex-end;
 }
 
 /* ================================
