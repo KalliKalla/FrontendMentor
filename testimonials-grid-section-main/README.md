@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: (https://github.com/KalliKalla/FrontendMentor/tree/master/testimonials-grid-section-main)
+- Live Site URL: (https://kallikalla.github.io/FrontendMentor/testimonials-grid-section-main/index.html)
 
 ## My process
 
@@ -46,6 +46,4 @@ I got more comfortable with using CSS Grid and used utility classes for the vari
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+Frontend Mentor: (https://www.frontendmentor.io/profile/KalliKalla)
