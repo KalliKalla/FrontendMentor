@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(assets/font/RedHatDisplay-Medium.ttf) format(truetype);
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Red Hat Display";
+  src: url(assets/font/RedHatDisplay-Black.ttf) format(truetype);
+  font-weight: 900;
+  font-style: normal;
+  font-display: normal;
+}
+
+/*  ================================
+    DESIGN TOKENS
+    ================================ */
+
+:root {
+  /* Typography */
+  --font-family-primary: "Red Hat Display";
+
+  --font-weight-medium: 500;
+  --font-weight-black: 900;
+
+  /* Type scale */
+}
